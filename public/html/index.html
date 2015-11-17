@@ -17,11 +17,25 @@
         <h1>Page Banner</h1>
     </header>
 
-    <nav layout="row" layout-align="center end" class="nav">
-        <md-button ui-sref="home" flex="10" class="nav-button">Home</md-button>
-        <md-button ui-sref="about" flex="10" class="nav-button">About</md-button>
-        <md-button ui-sref="projects" flex="10" class="nav-button">Projects</md-button>
+    <nav layout="row" layout-align-sm="start end" layout-align-gt-sm="center end" class="nav">
+        <md-button ng-click="mainCtrl.sideNavOpen()" hide-gt-sm class="md-icon-button">
+            <md-icon md-svg-src="./img/icon/ic_menu_white_48px.svg" aria-label="navigate"></md-icon>
+        </md-button>
+        <md-button ui-sref="home" flex="10" hide-sm class="nav-button">Home</md-button>
+        <md-button ui-sref="about" flex="10" hide-sm class="nav-button">About</md-button>
+        <md-button ui-sref="projects" flex="10" hide-sm class="nav-button">Projects</md-button>
     </nav>
+
+    <md-sidenav layout="column" md-component-id="left" class="md-sidenav-left">
+        <div class="nav"r>
+            <md-button ng-click="mainCtrl.sideNavClose()" class="md-icon-button">
+                <md-icon md-svg-src="./img/icon/ic_close_white_48px.svg" aria-label="navigation-close"></md-icon>
+            </md-button>
+        </div>
+        <md-button ui-sref="home" ng-click="mainCtrl.sideNavClose()">Home</md-button>
+        <md-button ui-sref="about" ng-click="mainCtrl.sideNavClose()">About</md-button>
+        <md-button ui-sref="projects" ng-click="mainCtrl.sideNavClose()">Projects</md-button>
+    </md-sidenav>
 
 
     <ui-view></ui-view>
