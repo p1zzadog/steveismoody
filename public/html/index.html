@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>steveismoody</title>
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.0-rc4/angular-material.min.css"/>
-    <link type="text/css" rel="stylesheet" href="./css/build/client.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.0-rc4/angular-material.min.css"/>
+    <link rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=Raleway:500,700">
+    <link rel="stylesheet" type="text/css" href="./css/build/client.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
 
 </head>
@@ -15,14 +17,18 @@
         <h1>Page Banner</h1>
     </header>
 
-    <nav layout="row" layout-align="start end" class="nav">
-        <md-button flex="10">Home</md-button>
-        <md-button flex="10">About</md-button>
-        <md-button flex="10">Projects</md-button>
+    <nav layout="row" layout-align="center end" class="nav">
+        <md-button ui-sref="home" flex="10" class="nav-button">Home</md-button>
+        <md-button ui-sref="about" flex="10" class="nav-button">About</md-button>
+        <md-button ui-sref="projects" flex="10" class="nav-button">Projects</md-button>
     </nav>
 
 
     <ui-view></ui-view>
+
+    <footer layout="row" layout-align="center center" class="footer">
+        <h6>Footer</h6>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.0-rc4/angular-material.min.js"></script>

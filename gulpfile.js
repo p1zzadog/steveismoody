@@ -8,7 +8,7 @@ gulp.task('default', function(){
 });
 
 gulp.task('build-js', function(){
-   gulp.src('./public/js/source/**/*.js')
+   gulp.src(['./public/js/source/ngConfig.js', './public/js/source/**/*.js'])
        .pipe(concat('client.js'))
        .pipe(makeItUgly())
        .pipe(gulp.dest('./public/js/build/'))

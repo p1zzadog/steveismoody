@@ -1,19 +1,34 @@
+body {
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
 .banner {
-    background-color:#5BDE57;
+    background-color: #5BDE57;
     color: white;
 }
 
 .nav {
-    background-color:#579FDE;
+    background-color: #579FDE;
     color:white;
 }
 
+.md-button.nav-button {
+    border:0;
+    margin:0;
+}
+
 .content {
-    background-color:#DE9757;
+    background-color: #DE9757;
     color:white;
 }
 
 .background {
-    background-color:#DA57DE;
+    background-color: #DA57DE;
     color:white;
+}
+
+.footer {
+    background-color: #5BDE57;
+    color: white;
 }
