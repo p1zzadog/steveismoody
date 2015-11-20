@@ -23,6 +23,10 @@ body {
     color:white;
 }
 
+.content:focus, .background:focus {
+    outline:none;
+}
+
 .background {
     background-color: #DA57DE;
     color:white;

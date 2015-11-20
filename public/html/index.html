@@ -37,8 +37,25 @@
         <md-button ui-sref="projects" ng-click="mainCtrl.sideNavClose()">Projects</md-button>
     </md-sidenav>
 
+    <div layout-gt-sm="row" layout-sm="column">
+        <div ng-click="mainCtrl.gridFocus('left')" flex-gt-sm="{{mainCtrl.grid.left}}" layout-gt-sm="column" layout-align="center center" class="background">
+            <h2>Home View</h2>
+            <h3>Left Column</h3>
+        </div>
 
-    <ui-view></ui-view>
+        <div ng-click="mainCtrl.gridFocus('mid')" flex-gt-sm="{{mainCtrl.grid.mid}}" layout-gt-sm="column" layout-align="center center" class="content">
+            <h2>About</h2>
+            <h3>Middle Column</h3>
+        </div>
+
+        <div ng-click="mainCtrl.gridFocus('right')" flex-gt-sm="{{mainCtrl.grid.right}}" layout-gt-sm="column" layout-align="center center" class="background">
+            <h2>Projects</h2>
+            <h3>Right Column</h3>
+        </div>
+    </div>
+
+
+    <!--<ui-view></ui-view>-->
 
     <footer layout="row" layout-align="center center" class="footer">
         <h6>Footer</h6>
