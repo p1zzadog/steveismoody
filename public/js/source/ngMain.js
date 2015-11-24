@@ -11,30 +11,46 @@ angular.module('ngSteve').controller('mainController', ['$mdSidenav', function($
 
 
     mainCtrl.grid = {
-        left  : "90",
-        mid   : "5",
-        right : "5"
+        left  : {
+            flex   : "90",
+            active : true
+        },
+        mid   : {
+            flex   : "5",
+            active : false
+        },
+        right : {
+            flex   : "5",
+            active : false
+        },
+        focus : function(id){
+            if (id === 'left'){
+                mainCtrl.grid.left.flex   = '90';
+                mainCtrl.grid.left.active = true;
+                mainCtrl.grid.mid.flex    = '5';
+                mainCtrl.grid.left.active = false;
+                mainCtrl.grid.right.flex  = '5';
+                mainCtrl.grid.left.active = false;
+
+            }
+            if (id === 'mid'){
+                mainCtrl.grid.left.flex   = '5';
+                mainCtrl.grid.left.active = false;
+                mainCtrl.grid.mid.flex    = '90';
+                mainCtrl.grid.left.active = true;
+                mainCtrl.grid.right.flex  = '5';
+                mainCtrl.grid.left.active = false;
+            }
+            if (id === 'right'){
+                mainCtrl.grid.left.flex   = '5';
+                mainCtrl.grid.left.active = false;
+                mainCtrl.grid.mid.flex    = '5';
+                mainCtrl.grid.left.active = false;
+                mainCtrl.grid.right.flex  = '90';
+                mainCtrl.grid.left.active = true;
+            }
+        }
     };
-
-    mainCtrl.gridFocus = function(id){
-        if (id === 'left'){
-            mainCtrl.grid.left = '90';
-            mainCtrl.grid.mid = '5';
-            mainCtrl.grid.right = '5';
-        }
-        if (id === 'mid'){
-            mainCtrl.grid.left = '5';
-            mainCtrl.grid.mid = '90';
-            mainCtrl.grid.right = '5';
-        }
-        if (id === 'right'){
-            mainCtrl.grid.left = '5';
-            mainCtrl.grid.mid = '5';
-            mainCtrl.grid.right = '90';
-        }
-
-    };
-
 
     console.log('mainController loaded');
 }]);
