@@ -7,22 +7,22 @@ angular.module('ngSteve').config(['$stateProvider', '$mdThemingProvider',
                     url         : '',
                     templateUrl : '/html/templates/home.html',
                     controller  : 'homeController as homeCtrl'
-                })
-                .state('home', {
-                    url         : '/home',
-                    templateUrl : '/html/templates/home.html',
-                    controller  : 'homeController as homeCtrl'
-                })
-                .state('about', {
-                    url         : '/about',
-                    templateUrl : '/html/templates/about.html',
-                    controller  : 'aboutController as aboutCtrl'
-                })
-                .state('projects', {
-                    url         : '/projects',
-                    templateUrl : '/html/templates/projects.html',
-                    controller  : 'projectController as projectCtrl'
                 });
+                //.state('home', {
+                //    url         : '/home',
+                //    templateUrl : '/html/templates/home.html',
+                //    controller  : 'homeController as homeCtrl'
+                //})
+                //.state('about', {
+                //    url         : '/about',
+                //    templateUrl : '/html/templates/about.html',
+                //    controller  : 'aboutController as aboutCtrl'
+                //})
+                //.state('projects', {
+                //    url         : '/projects',
+                //    templateUrl : '/html/templates/projects.html',
+                //    controller  : 'projectController as projectCtrl'
+                //});
 
             $mdThemingProvider.theme('default')
                 .primaryPalette('indigo')

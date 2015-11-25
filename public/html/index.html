@@ -18,95 +18,60 @@
     </header>
 
     <nav layout="row" layout-align-sm="start end" layout-align-gt-sm="center end" class="nav">
-        <md-button ng-click="mainCtrl.sideNavOpen()" hide-gt-sm class="md-icon-button">
-            <md-icon md-svg-src="./img/icon/ic_menu_white_48px.svg" aria-label="navigate"></md-icon>
-        </md-button>
-        <md-button ui-sref="home" ng-click="mainCtrl.grid.focus('left')" flex="10" hide-sm class="nav-button">Home</md-button>
-        <md-button ui-sref="about" ng-click="mainCtrl.grid.focus('mid')" flex="10" hide-sm class="nav-button">About</md-button>
-        <md-button ui-sref="projects" ng-click="mainCtrl.grid.focus('right')" flex="10" hide-sm class="nav-button">Projects</md-button>
+        <!--<md-button ng-click="mainCtrl.sideNavOpen()" hide-gt-sm class="md-icon-button">-->
+            <!--<md-icon md-svg-src="./img/icon/ic_menu_white_48px.svg" aria-label="navigate"></md-icon>-->
+        <!--</md-button>-->
+        <md-button ng-click="mainCtrl.grid.focus('left')" flex="10" hide-sm class="nav-button">Home</md-button>
+        <md-button ng-click="mainCtrl.grid.focus('mid')" flex="10" hide-sm class="nav-button">About</md-button>
+        <md-button ng-click="mainCtrl.grid.focus('right')" flex="10" hide-sm class="nav-button">Projects</md-button>
     </nav>
 
-    <md-sidenav layout="column" md-component-id="left" class="md-sidenav-left">
-        <div class="nav">
-            <md-button ng-click="mainCtrl.sideNavClose()" class="md-icon-button">
-                <md-icon md-svg-src="./img/icon/ic_close_white_48px.svg" aria-label="navigation-close"></md-icon>
-            </md-button>
-        </div>
-        <md-button ui-sref="home" ng-click="mainCtrl.sideNavClose()">Home</md-button>
-        <md-button ui-sref="about" ng-click="mainCtrl.sideNavClose()">About</md-button>
-        <md-button ui-sref="projects" ng-click="mainCtrl.sideNavClose()">Projects</md-button>
-    </md-sidenav>
+    <!--<md-sidenav layout="column" md-component-id="left" class="md-sidenav-left">-->
+        <!--<div class="nav">-->
+            <!--<md-button ng-click="mainCtrl.sideNavClose()" class="md-icon-button">-->
+                <!--<md-icon md-svg-src="./img/icon/ic_close_white_48px.svg" aria-label="navigation-close"></md-icon>-->
+            <!--</md-button>-->
+        <!--</div>-->
+        <!--<md-button ng-click="mainCtrl.sideNavClose(); mainCtrl.grid.focus('left')">Home</md-button>-->
+        <!--<md-button ng-click="mainCtrl.sideNavClose(); mainCtrl.grid.focus('mid')">About</md-button>-->
+        <!--<md-button ng-click="mainCtrl.sideNavClose(); mainCtrl.grid.focus('right')">Projects</md-button>-->
+    <!--</md-sidenav>-->
 
     <div layout-gt-sm="row" layout-sm="column" class="content-container">
-        <div ng-click="mainCtrl.grid.focus('left')" flex-gt-sm="{{mainCtrl.grid.left.flex}}" layout-gt-sm="column" layout-align="center center" class="content content-left">
+        <div ng-click="mainCtrl.grid.focus('left')" flex-gt-sm="{{mainCtrl.grid.left.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content content-left">
             <header>
                 <h2 class="center-text">Home View</h2>
                 <h3 class="center-text">Left Column</h3>
             </header>
-            <section ng-show="mainCtrl.grid.left.active" layout="row">
+            <section ng-show="mainCtrl.grid.left.active || mainCtrl.smallScreen" layout="row">
                 <div flex="30"></div>
-                <div flex="40" class="mid">
-                    <p>
-                        Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
-                    </p>
-                    <p>
-                        Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
-                    </p>
-                    <p>
-                        Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
-                    </p>
-                </div>
+                <div flex="40" ng-include="'./html/templates/home.html'"></div>
                 <div flex="30"></div>
             </section>
         </div>
-
-        <div ng-click="mainCtrl.grid.focus('mid')" flex-gt-sm="{{mainCtrl.grid.mid.flex}}" layout-gt-sm="column" layout-align="center center" class="content content-mid">
+        <div ng-click="mainCtrl.grid.focus('mid')" flex-gt-sm="{{mainCtrl.grid.mid.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content content-mid">
             <header>
                 <h2 class="center-text">About</h2>
                 <h3 class="center-text">Middle Column</h3>
             </header>
-            <section ng-show="mainCtrl.grid.mid.active" layout="row">
+            <section ng-show="mainCtrl.grid.mid.active || mainCtrl.smallScreen" layout="row">
                 <div flex="30"></div>
-                <div flex="40" class="mid">
-                    <p>
-                        Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
-                    </p>
-                    <p>
-                        Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
-                    </p>
-                    <p>
-                        Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
-                    </p>
-                </div>
+                <div flex="40" ng-include="'./html/templates/about.html'"></div>
                 <div flex="30"></div>
             </section>
         </div>
-
-        <div ng-click="mainCtrl.grid.focus('right')" flex-gt-sm="{{mainCtrl.grid.right.flex}}" layout-gt-sm="column" layout-align="center center" class="content content-right">
+        <div ng-click="mainCtrl.grid.focus('right')" flex-gt-sm="{{mainCtrl.grid.right.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content content-right">
             <header>
                 <h2 class="center-text">Projects</h2>
                 <h3 class="center-text">Right Column</h3>
             </header>
-            <section ng-show="mainCtrl.grid.right.active" layout="row">
+            <section ng-show="mainCtrl.grid.right.active || mainCtrl.smallScreen" layout="row">
                 <div flex="30"></div>
-                <div flex="40" class="mid">
-                    <p>
-                        Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
-                    </p>
-                    <p>
-                        Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
-                    </p>
-                    <p>
-                        Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
-                    </p>
-                </div>
+                <div flex="40" ng-include="'./html/templates/projects.html'"></div>
                 <div flex="30"></div>
             </section>
         </div>
     </div>
-
-
-    <!--<ui-view></ui-view>-->
 
     <footer layout="row" layout-align="center center" class="footer">
         <h6>Footer</h6>

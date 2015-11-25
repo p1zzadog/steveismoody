@@ -1,4 +1,4 @@
-angular.module('ngSteve').controller('mainController', ['$mdSidenav', function($mdSidenav){
+angular.module('ngSteve').controller('mainController', ['$mdSidenav', '$mdMedia', '$scope', function($mdSidenav, $mdMedia, $scope){
     var mainCtrl = this;
 
     mainCtrl.sideNavOpen = function(){
@@ -49,9 +49,16 @@ angular.module('ngSteve').controller('mainController', ['$mdSidenav', function($
                 mainCtrl.grid.right.flex   = '90';
                 mainCtrl.grid.right.active = true;
             }
-            console.log('mainCtrl.grid: ', mainCtrl.grid);
         }
     };
+
+    $scope.$watch(function() {
+        return $mdMedia('sm');
+    }, function() {
+        mainCtrl.smallScreen = $mdMedia('sm')
+    });
+
+    //mainCtrl.smallScreen = $mdMedia('sm');
 
     console.log('mainController loaded');
 }]);
