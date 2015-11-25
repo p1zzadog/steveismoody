@@ -22,18 +22,18 @@ body {
     margin:0;
 }
 
-.content-container {
+.body-container {
     background-image: url('../../img/background/1080_Paciorek_Mtns.jpg');
     background-attachment: fixed;
     color:white;
     min-height:1080px;
 }
 
-.content:focus {
+.content-container:focus {
     outline:none;
 }
 
-.content header {
+.content-container header {
     opacity:1;
 }
 
@@ -42,32 +42,37 @@ body {
     color: white;
 }
 
-.content-left, .content-left.flex-sm {
-    background-color:#D957DE;
-    opacity:0.8;
+.content-bg-left, .content-bg-left.flex-sm {
+    background-color: rgba(217,87,222,0.5);
 }
 
-.content-mid, .content-mid.flex-sm {
-    background-color:#DE9557;
-    opacity:0.8;
+.content-bg-mid, .content-bg-mid.flex-sm {
+    background-color: rgba(222,149,87,0.5);
+
 
 }
-.content-right, .content-right.flex-sm {
-    background-color:#579FDE;
-    opacity:0.8;
+.content-bg-right, .content-bg-right.flex-sm {
+    background-color:rgba(87,159,222,0.5);
 }
+
+/*.content {*/
+    /*background-color:rgba(0,0,0,0.8)*/
+/*}*/
 
 @media screen and (min-width: 600px){
-    .content.flex-gt-sm-90 {
-        background-color:black;
-        opacity: 0.8;
+
+    /*.content{*/
+        /*background-color:rgba(0,0,0,0);*/
+    /*}*/
+    .content-container.flex-gt-sm-90 {
+        background-color:rgba(0,0,0,0.8);
     }
 
-    .content.flex-gt-sm-5 {
+    .content-container.flex-gt-sm-5 {
         opacity: 0.3;
     }
 
-    .content.flex-gt-sm-90, .content.flex-gt-sm-5 {
+    .content-container.flex-gt-sm-90, .content-container.flex-gt-sm-5 {
         -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
         -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
         -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;

@@ -37,39 +37,45 @@
         <!--<md-button ng-click="mainCtrl.sideNavClose(); mainCtrl.grid.focus('right')">Projects</md-button>-->
     <!--</md-sidenav>-->
 
-    <div layout-gt-sm="row" layout-sm="column" class="content-container">
-        <div ng-click="mainCtrl.grid.focus('left')" flex-gt-sm="{{mainCtrl.grid.left.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content content-left">
-            <header>
-                <h2 class="center-text">Home View</h2>
-                <h3 class="center-text">Left Column</h3>
-            </header>
-            <section ng-show="mainCtrl.grid.left.active || mainCtrl.smallScreen" layout="row">
-                <div flex="30"></div>
-                <div flex="40" ng-include="'./html/templates/home.html'"></div>
-                <div flex="30"></div>
-            </section>
+    <div layout-gt-sm="row" layout-sm="column" class="body-container">
+        <div ng-click="mainCtrl.grid.focus('left')" flex-gt-sm="{{mainCtrl.grid.left.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content-container content-bg-left">
+            <div>
+                <header>
+                    <h2 class="center-text">Home View</h2>
+                    <h3 class="center-text">Left Column</h3>
+                </header>
+                <section ng-show="mainCtrl.grid.left.active || mainCtrl.smallScreen" layout="row">
+                    <div flex-gt-sm="30" flex-sm="10"></div>
+                    <div flex-gt-sm="40" flex-sm="80" ng-include="'./html/templates/home.html'" class="content" layout-padding layout-margin></div>
+                    <div flex-gt-sm="30" flex-sm="10"></div>
+                </section>
+            </div>
         </div>
-        <div ng-click="mainCtrl.grid.focus('mid')" flex-gt-sm="{{mainCtrl.grid.mid.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content content-mid">
-            <header>
-                <h2 class="center-text">About</h2>
-                <h3 class="center-text">Middle Column</h3>
-            </header>
-            <section ng-show="mainCtrl.grid.mid.active || mainCtrl.smallScreen" layout="row">
-                <div flex="30"></div>
-                <div flex="40" ng-include="'./html/templates/about.html'"></div>
-                <div flex="30"></div>
-            </section>
+        <div ng-click="mainCtrl.grid.focus('mid')" flex-gt-sm="{{mainCtrl.grid.mid.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content-container content-bg-mid">
+            <div>
+                <header>
+                    <h2 class="center-text">About</h2>
+                    <h3 class="center-text">Middle Column</h3>
+                </header>
+                <section ng-show="mainCtrl.grid.mid.active || mainCtrl.smallScreen" layout="row">
+                    <div flex-gt-sm="30" flex-sm="10"></div>
+                    <div flex-gt-sm="40" flex-sm="80" ng-include="'./html/templates/about.html'" class="content" layout-padding layout-margin></div>
+                    <div flex-gt-sm="30" flex-sm="10"></div>
+                </section>
+            </div>
         </div>
-        <div ng-click="mainCtrl.grid.focus('right')" flex-gt-sm="{{mainCtrl.grid.right.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content content-right">
-            <header>
-                <h2 class="center-text">Projects</h2>
-                <h3 class="center-text">Right Column</h3>
-            </header>
-            <section ng-show="mainCtrl.grid.right.active || mainCtrl.smallScreen" layout="row">
-                <div flex="30"></div>
-                <div flex="40" ng-include="'./html/templates/projects.html'"></div>
-                <div flex="30"></div>
-            </section>
+        <div ng-click="mainCtrl.grid.focus('right')" flex-gt-sm="{{mainCtrl.grid.right.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content-container content-bg-right">
+            <div>
+                <header>
+                    <h2 class="center-text">Projects</h2>
+                    <h3 class="center-text">Right Column</h3>
+                </header>
+                <section ng-show="mainCtrl.grid.right.active || mainCtrl.smallScreen" layout="row">
+                    <div flex-gt-sm="30" flex-sm="10"></div>
+                    <div flex-gt-sm="40" flex-sm="80" ng-include="'./html/templates/projects.html'" class="content" layout-padding layout-margin></div>
+                    <div flex-gt-sm="30" flex-sm="10"></div>
+                </section>
+            </div>
         </div>
     </div>
 
