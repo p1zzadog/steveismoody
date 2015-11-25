@@ -3,8 +3,12 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+.center-text {
+    text-align:center;
+}
+
 .banner {
-    background-color: #5BDE57;
+    background-color: black;
     color: white;
 }
 
@@ -29,9 +33,32 @@ body {
     outline:none;
 }
 
+.content header {
+    opacity:1;
+}
+
+.content .mid {
+    padding:0.5rem;
+    opacity:1;
+    border: 1px solid white;
+}
+
 .footer {
-    background-color: #5BDE57;
+    background-color: black;
     color: white;
+}
+
+.content-left {
+    background-color:#D957DE;
+}
+
+.content-mid {
+    background-color:#DE9557;
+
+}
+
+.content-right {
+    background-color:#579FDE;
 }
 
 .content.flex-gt-sm-90 {
@@ -39,9 +66,8 @@ body {
     opacity: 0.8;
 }
 
-content.flex-gt-sm-5 {
-    background-color:black;
-    opacity: 0;
+.content.flex-gt-sm-5 {
+    opacity: 0.3;
 }
 
 .content.flex-gt-sm-90, .content.flex-gt-sm-5 {
