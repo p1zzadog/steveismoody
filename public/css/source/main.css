@@ -55,15 +55,8 @@ body {
     background-color:rgba(87,159,222,0.5);
 }
 
-/*.content {*/
-    /*background-color:rgba(0,0,0,0.8)*/
-/*}*/
-
 @media screen and (min-width: 600px){
 
-    /*.content{*/
-        /*background-color:rgba(0,0,0,0);*/
-    /*}*/
     .content-container.flex-gt-sm-90 {
         background-color:rgba(0,0,0,0.8);
     }
@@ -78,6 +71,31 @@ body {
         -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
         transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
 
+    }
+
+    .content-section {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+
+    .content-section.ng-hide{
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    .content-section {
+        -webkit-transition: transform 2s ease 0.35s, opacity 2s ease 0.35s;
+        -moz-transition: transform 2s ease 0.35s, opacity 2s ease 0.35s;
+        -o-transition: transform 2s ease 0.35s, opacity 2s ease 0.35s;
+        transition: transform 2s ease 0.35s, opacity 2s ease 0.35s;
+
+    }
+
+    .content-section.ng-hide {
+        -webkit-transition: transform 0s, opacity 0s;
+        -moz-transition: transform 0s, opacity 0s;
+        -o-transition: transform 0s, opacity 0s;
+        transition: transform 0s, opacity 0s;
     }
 }
 

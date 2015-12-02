@@ -44,7 +44,7 @@
                     <h2 class="center-text">Home View</h2>
                     <h3 class="center-text">Left Column</h3>
                 </header>
-                <section ng-show="mainCtrl.grid.left.active || mainCtrl.smallScreen" layout="row">
+                <section ng-show="mainCtrl.grid.left.active || mainCtrl.smallScreen" layout="row" class="content-section">
                     <div flex-gt-sm="30" flex-sm="10"></div>
                     <div flex-gt-sm="40" flex-sm="80" ng-include="'./html/templates/home.html'" class="content" layout-padding layout-margin></div>
                     <div flex-gt-sm="30" flex-sm="10"></div>
@@ -57,7 +57,7 @@
                     <h2 class="center-text">About</h2>
                     <h3 class="center-text">Middle Column</h3>
                 </header>
-                <section ng-show="mainCtrl.grid.mid.active || mainCtrl.smallScreen" layout="row">
+                <section ng-show="mainCtrl.grid.mid.active || mainCtrl.smallScreen" layout="row" class="content-section">
                     <div flex-gt-sm="30" flex-sm="10"></div>
                     <div flex-gt-sm="40" flex-sm="80" ng-include="'./html/templates/about.html'" class="content" layout-padding layout-margin></div>
                     <div flex-gt-sm="30" flex-sm="10"></div>
@@ -70,7 +70,7 @@
                     <h2 class="center-text">Projects</h2>
                     <h3 class="center-text">Right Column</h3>
                 </header>
-                <section ng-show="mainCtrl.grid.right.active || mainCtrl.smallScreen" layout="row">
+                <section ng-show="mainCtrl.grid.right.active || mainCtrl.smallScreen" layout="row" class="content-section">
                     <div flex-gt-sm="30" flex-sm="10"></div>
                     <div flex-gt-sm="40" flex-sm="80" ng-include="'./html/templates/projects.html'" class="content" layout-padding layout-margin></div>
                     <div flex-gt-sm="30" flex-sm="10"></div>
