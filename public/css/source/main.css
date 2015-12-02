@@ -42,6 +42,14 @@ body {
     color: white;
 }
 
+.content-bg-left header, .content-bg-left section {
+    transform: translateX(5.556%);
+}
+
+.content-bg-right header, .content-bg-right section {
+    transform: translateX(-5.556%);
+}
+
 .content-bg-left, .content-bg-left.flex-sm {
     background-color: rgba(217,87,222,0.5);
 }
