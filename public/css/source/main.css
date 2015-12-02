@@ -42,14 +42,6 @@ body {
     color: white;
 }
 
-.content-bg-left header, .content-bg-left section {
-    transform: translateX(5.556%);
-}
-
-.content-bg-right header, .content-bg-right section {
-    transform: translateX(-5.556%);
-}
-
 .content-bg-left, .content-bg-left.flex-sm {
     background-color: rgba(217,87,222,0.5);
 }
@@ -63,7 +55,17 @@ body {
     background-color:rgba(87,159,222,0.5);
 }
 
+.image-container {
+    text-align:center;
+}
+
+.profile-pic {
+    max-width:100%;
+}
+
 @media screen and (min-width: 600px){
+
+
 
     .content-container.flex-gt-sm-90 {
         background-color:rgba(0,0,0,0.8);
@@ -79,6 +81,14 @@ body {
         -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
         transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
 
+    }
+
+    .content-bg-left header, .content-bg-left section {
+        transform: translateX(5.556%);
+    }
+
+    .content-bg-right header, .content-bg-right section {
+        transform: translateX(-5.556%);
     }
 
     .content-section {
