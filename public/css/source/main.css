@@ -115,6 +115,10 @@ a {
         z-index: -1;
     }
 
+    /*.content-header {*/
+        /*height:300px;*/
+    /*}*/
+
     .content-header-left {
         transform: rotate(-90deg);
         /*position: fixed;*/

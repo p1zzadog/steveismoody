@@ -18,15 +18,15 @@
     </header>
 
     <nav layout="row" layout-align-sm="start end" layout-align-gt-sm="center end" class="nav">
-        <md-button ng-click="mainCtrl.grid.focus('left')" flex="10" hide-sm class="nav-button" ng-class="{'active-button':mainCtrl.grid.left.active}">Home</md-button>
-        <md-button ng-click="mainCtrl.grid.focus('mid')" flex="10" hide-sm class="nav-button" ng-class="{'active-button':mainCtrl.grid.mid.active}">About</md-button>
-        <md-button ng-click="mainCtrl.grid.focus('right')" flex="10" hide-sm class="nav-button" ng-class="{'active-button':mainCtrl.grid.right.active}">Projects</md-button>
+        <md-button ng-click="mainCtrl.grid.focus('left')" flex="10" hide-sm class="nav-button" ng-class="{'active-button':mainCtrl.grid.left.active}">The Man Himself</md-button>
+        <md-button ng-click="mainCtrl.grid.focus('mid')" flex="10" hide-sm class="nav-button" ng-class="{'active-button':mainCtrl.grid.mid.active}">His Talents</md-button>
+        <md-button ng-click="mainCtrl.grid.focus('right')" flex="10" hide-sm class="nav-button" ng-class="{'active-button':mainCtrl.grid.right.active}">His Projects</md-button>
     </nav>
 
     <div layout-gt-sm="row" layout-sm="column" class="body-container">
         <div ng-click="mainCtrl.grid.focus('left')" flex-gt-sm="{{mainCtrl.grid.left.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content-container content-bg-left">
             <div>
-                <header ng-show="!mainCtrl.grid.left.active || mainCtrl.smallScreen" layout-padding class="content-header-left">
+                <header ng-show="!mainCtrl.grid.left.active || mainCtrl.smallScreen" layout-padding class="content-header content-header-left">
                     <h2 class="center-text">The Man Himself</h2>
                 </header>
                 <section ng-show="mainCtrl.grid.left.active || mainCtrl.smallScreen" layout="row" class="content-section">
@@ -38,7 +38,7 @@
         </div>
         <div ng-click="mainCtrl.grid.focus('mid')" flex-gt-sm="{{mainCtrl.grid.mid.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content-container content-bg-mid">
             <div>
-                <header ng-show="!mainCtrl.grid.mid.active || mainCtrl.smallScreen" layout-padding ng-class="[{'content-header-mid-left':mainCtrl.grid.left.active}, {'content-header-mid-right':mainCtrl.grid.right.active}]">
+                <header ng-show="!mainCtrl.grid.mid.active || mainCtrl.smallScreen" layout-padding ng-class="[{'content-header-mid-left':mainCtrl.grid.left.active}, {'content-header-mid-right':mainCtrl.grid.right.active}]" class="content-header">
                     <h2 class="center-text">His Talents</h2>
                 </header>
                 <section ng-show="mainCtrl.grid.mid.active || mainCtrl.smallScreen" layout="row" class="content-section">
@@ -50,7 +50,7 @@
         </div>
         <div ng-click="mainCtrl.grid.focus('right')" flex-gt-sm="{{mainCtrl.grid.right.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content-container content-bg-right">
             <div>
-                <header ng-show="!mainCtrl.grid.right.active || mainCtrl.smallScreen" layout-padding class="content-header-right">
+                <header ng-show="!mainCtrl.grid.right.active || mainCtrl.smallScreen" layout-padding class="content-header content-header-right">
                     <h2 class="center-text">His Projects</h2>
                 </header>
                 <section ng-show="mainCtrl.grid.right.active || mainCtrl.smallScreen" layout="row" class="content-section">
