@@ -87,12 +87,18 @@ body {
 
     }
 
+    .content-bg-mid.flex-gt-sm-5{
+        z-index: 1;
+    }
+
     .content-bg-left header, .content-bg-left section {
         transform: translateX(5.556%);
+        z-index: -1;
     }
 
     .content-bg-right header, .content-bg-right section {
         transform: translateX(-5.556%);
+        z-index: -1;
     }
 
     .content-section {

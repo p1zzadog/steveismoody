@@ -24,6 +24,8 @@ angular.module('ngSteve').controller('mainController', ['$mdSidenav', '$mdMedia'
             active : false
         },
         focus : function(id){
+
+            console.log("'mainCtrl.grid.focus('" + id + "') runs");
             if (id === 'left'){
                 mainCtrl.grid.left.flex    = '90';
                 mainCtrl.grid.left.active  = true;
