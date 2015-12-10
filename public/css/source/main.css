@@ -23,10 +23,9 @@ body {
 }
 
 .body-container {
-    background-image: url('../../img/background/1080_Paciorek_Mtns.jpg');
-    background-attachment: fixed;
+    /*background-image: url('../../img/background/600_Paciorek_Mtns.jpg');*/
     color:white;
-    min-height:1080px;
+
 }
 
 .content-container:focus {
@@ -43,19 +42,34 @@ body {
 }
 
 .content-bg-left, .content-bg-left.flex-sm {
-    background-color: rgba(217,87,222,0.5);
+    background-color: rgba(217,87,222,1);
 }
 
 .content-bg-mid, .content-bg-mid.flex-sm {
-    background-color: rgba(222,149,87,0.5);
+    background-color: rgba(222,149,87,1);
 
 
 }
 .content-bg-right, .content-bg-right.flex-sm {
-    background-color:rgba(87,159,222,0.5);
+    background-color:rgba(87,159,222,1);
+}
+
+.image-container {
+    text-align:center;
+}
+
+.profile-pic {
+    max-width:100%;
 }
 
 @media screen and (min-width: 600px){
+    .body-container{
+        min-height:1080px;
+        background-image: url('../../img/background/1080_Paciorek_Mtns.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
 
     .content-container.flex-gt-sm-90 {
         background-color:rgba(0,0,0,0.8);
@@ -71,6 +85,14 @@ body {
         -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
         transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
 
+    }
+
+    .content-bg-left header, .content-bg-left section {
+        transform: translateX(5.556%);
+    }
+
+    .content-bg-right header, .content-bg-right section {
+        transform: translateX(-5.556%);
     }
 
     .content-section {
