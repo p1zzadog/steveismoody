@@ -18,30 +18,16 @@
     </header>
 
     <nav layout="row" layout-align-sm="start end" layout-align-gt-sm="center end" class="nav">
-        <!--<md-button ng-click="mainCtrl.sideNavOpen()" hide-gt-sm class="md-icon-button">-->
-            <!--<md-icon md-svg-src="./img/icon/ic_menu_white_48px.svg" aria-label="navigate"></md-icon>-->
-        <!--</md-button>-->
-        <md-button ng-click="mainCtrl.grid.focus('left')" flex="10" hide-sm class="nav-button">Home</md-button>
-        <md-button ng-click="mainCtrl.grid.focus('mid')" flex="10" hide-sm class="nav-button">About</md-button>
-        <md-button ng-click="mainCtrl.grid.focus('right')" flex="10" hide-sm class="nav-button">Projects</md-button>
+        <md-button ng-click="mainCtrl.grid.focus('left')" flex="10" hide-sm class="nav-button" ng-class="{'active-button':mainCtrl.grid.left.active}">Home</md-button>
+        <md-button ng-click="mainCtrl.grid.focus('mid')" flex="10" hide-sm class="nav-button" ng-class="{'active-button':mainCtrl.grid.mid.active}">About</md-button>
+        <md-button ng-click="mainCtrl.grid.focus('right')" flex="10" hide-sm class="nav-button" ng-class="{'active-button':mainCtrl.grid.right.active}">Projects</md-button>
     </nav>
-
-    <!--<md-sidenav layout="column" md-component-id="left" class="md-sidenav-left">-->
-        <!--<div class="nav">-->
-            <!--<md-button ng-click="mainCtrl.sideNavClose()" class="md-icon-button">-->
-                <!--<md-icon md-svg-src="./img/icon/ic_close_white_48px.svg" aria-label="navigation-close"></md-icon>-->
-            <!--</md-button>-->
-        <!--</div>-->
-        <!--<md-button ng-click="mainCtrl.sideNavClose(); mainCtrl.grid.focus('left')">Home</md-button>-->
-        <!--<md-button ng-click="mainCtrl.sideNavClose(); mainCtrl.grid.focus('mid')">About</md-button>-->
-        <!--<md-button ng-click="mainCtrl.sideNavClose(); mainCtrl.grid.focus('right')">Projects</md-button>-->
-    <!--</md-sidenav>-->
 
     <div layout-gt-sm="row" layout-sm="column" class="body-container">
         <div ng-click="mainCtrl.grid.focus('left')" flex-gt-sm="{{mainCtrl.grid.left.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content-container content-bg-left">
             <div>
-                <header>
-                    <h2 class="center-text">Home View</h2>
+                <header ng-show="!mainCtrl.grid.left.active || mainCtrl.smallScreen" layout-padding class="content-header-left">
+                    <h2 class="center-text">The Man Himself</h2>
                 </header>
                 <section ng-show="mainCtrl.grid.left.active || mainCtrl.smallScreen" layout="row" class="content-section">
                     <div flex-gt-sm="30" flex-sm="10"></div>
@@ -52,8 +38,8 @@
         </div>
         <div ng-click="mainCtrl.grid.focus('mid')" flex-gt-sm="{{mainCtrl.grid.mid.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content-container content-bg-mid">
             <div>
-                <header>
-                    <h2 class="center-text">About</h2>
+                <header ng-show="!mainCtrl.grid.mid.active || mainCtrl.smallScreen" layout-padding ng-class="[{'content-header-mid-left':mainCtrl.grid.left.active}, {'content-header-mid-right':mainCtrl.grid.right.active}]">
+                    <h2 class="center-text">His Talents</h2>
                 </header>
                 <section ng-show="mainCtrl.grid.mid.active || mainCtrl.smallScreen" layout="row" class="content-section">
                     <div flex-gt-sm="30" flex-sm="10"></div>
@@ -64,8 +50,8 @@
         </div>
         <div ng-click="mainCtrl.grid.focus('right')" flex-gt-sm="{{mainCtrl.grid.right.flex}}" flex-sm layout-gt-sm="column" layout-align="start center" class="content-container content-bg-right">
             <div>
-                <header>
-                    <h2 class="center-text">Projects</h2>
+                <header ng-show="!mainCtrl.grid.right.active || mainCtrl.smallScreen" layout-padding class="content-header-right">
+                    <h2 class="center-text">His Projects</h2>
                 </header>
                 <section ng-show="mainCtrl.grid.right.active || mainCtrl.smallScreen" layout="row" class="content-section">
                     <div flex-gt-sm="30" flex-sm="10"></div>
@@ -77,7 +63,7 @@
     </div>
 
     <footer layout="row" layout-align="center center" class="footer">
-        <h6>Footer</h6>
+        <h6>Steve's Foot(er)</h6>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>

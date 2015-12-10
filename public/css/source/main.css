@@ -3,6 +3,11 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+a {
+    /*text-decoration: none;*/
+    color: white;
+}
+
 .center-text {
     text-align:center;
 }
@@ -17,9 +22,18 @@ body {
     color:white;
 }
 
-.md-button.nav-button {
+.nav-button {
     border:0;
     margin:0;
+}
+
+.nav-button.active-button{
+    background-color:black;
+    border-radius:0;
+}
+
+.nav-button.active-button:hover{
+    background-color:black;
 }
 
 .body-container {
@@ -91,24 +105,43 @@ body {
         z-index: 1;
     }
 
-    .content-bg-left header, .content-bg-left section {
+    .content-bg-left.flex-gt-sm-90 header, .content-bg-left section {
         transform: translateX(5.556%);
         z-index: -1;
     }
 
-    .content-bg-right header, .content-bg-right section {
+    .content-bg-right.flex-gt-sm-90 header, .content-bg-right section {
         transform: translateX(-5.556%);
         z-index: -1;
     }
 
+    .content-header-left {
+        transform: rotate(-90deg);
+        /*position: fixed;*/
+
+    }
+
+    .content-header-mid-left{
+        transform: rotate(90deg);
+    }
+
+    .content-header-mid-right{
+        transform: rotate(-90deg);
+    }
+
+    .content-header-right {
+        transform: rotate(90deg);
+        /*position: fixed;*/
+
+    }
     .content-section {
         opacity: 1;
-        transform: translateY(-30px);
+        transform: translateY(0px);
     }
 
     .content-section.ng-hide{
         opacity: 0;
-        transform: translateY(0);
+        transform: translateY(30px);
     }
 
     .content-section {
