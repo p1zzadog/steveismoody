@@ -4,7 +4,6 @@ body {
 }
 
 a {
-    /*text-decoration: none;*/
     color: white;
 }
 
@@ -37,9 +36,7 @@ a {
 }
 
 .body-container {
-    /*background-image: url('../../img/background/600_Paciorek_Mtns.jpg');*/
     color:white;
-
 }
 
 .content-container:focus {
@@ -48,6 +45,10 @@ a {
 
 .content-container header {
     opacity:1;
+}
+
+.content-header {
+    text-align:center;
 }
 
 .footer {
@@ -115,28 +116,24 @@ a {
         z-index: -1;
     }
 
-    /*.content-header {*/
-        /*height:300px;*/
-    /*}*/
-
     .content-header-left {
         transform: rotate(-90deg);
-        /*position: fixed;*/
-
+        text-align:left;
     }
 
     .content-header-mid-left{
         transform: rotate(90deg);
+        text-align:right;
     }
 
     .content-header-mid-right{
         transform: rotate(-90deg);
+        text-align:left;
     }
 
     .content-header-right {
         transform: rotate(90deg);
-        /*position: fixed;*/
-
+        text-align:right;
     }
     .content-section {
         opacity: 1;
