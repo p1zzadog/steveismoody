@@ -103,17 +103,18 @@ a {
     }
 
     .content-bg-mid.flex-gt-sm-5{
-        z-index: 1;
+        /*can't remember what z-index was for, but it's causing problems on firefox*/
+        /*z-index: 1;*/
     }
 
     .content-bg-left.flex-gt-sm-90 header, .content-bg-left section {
         transform: translateX(5.556%);
-        z-index: -1;
+        /*z-index: -1;*/
     }
 
     .content-bg-right.flex-gt-sm-90 header, .content-bg-right section {
         transform: translateX(-5.556%);
-        z-index: -1;
+        /*z-index: -1;*/
     }
 
     .content-header-left {
@@ -147,9 +148,9 @@ a {
 
     .content-section {
         -webkit-transition: transform 2s ease 0.35s, opacity 2s ease 0.35s;
-        -moz-transition: transform 2s ease 0.35s, opacity 2s ease 0.35s;
-        -o-transition: transform 2s ease 0.35s, opacity 2s ease 0.35s;
-        transition: transform 2s ease 0.35s, opacity 2s ease 0.35s;
+        -moz-transition:    transform 2s ease 0.35s, opacity 2s ease 0.35s;
+        -o-transition:      transform 2s ease 0.35s, opacity 2s ease 0.35s;
+        transition:         transform 2s ease 0.35s, opacity 2s ease 0.35s;
 
     }
 
